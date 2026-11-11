@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Inventory Management</title>
+    <link rel="stylesheet" href="home.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar-clean">
+        <div class="nav-container">
+            <div class="logo">🛒 LIM</div>
+            <div class="nav-buttons">
+                <a href="#features" class="nav-btn">Features</a>
+                <a href="#demo" class="nav-btn">Demo</a>
+                <a href="index.html" class="btn-primary">Dashboard →</a>
+            </div>
+        </div>
+    </nav>
+    <section class="hero-clean">
+        <div class="hero-content">
+            <h1>Library Inventory<br><span class="hero-gradient">Management</span></h1>
+            <p>Real-time tracking book records in library</p>
+            <a href="index.html" class="btn-primary btn-large">Launch Dashboard</a>
+        </div>
+    </section>
+    <section id="features" class="features-clean">
+        <div class="container">
+            <h2>Core Features</h2>
+            <div class="features-grid-clean">
+                <div class="feature-card-clean">
+                    <div class="feature-icon-clean">
+                        <i class="fas fa-sync"></i>
+                    </div>
+                    <h3>Live Updates</h3>
+                    <p>Instant stock changes - sell, restock, stats update automatically</p>
+                </div>
+                <div class="feature-card-clean">
+                    <div class="feature-icon-clean">
+                        <i class="fas fa-exclamation"></i>
+                    </div>
+                    <h3>Smart Alerts</h3>
+                    <p>Yellow ≤5, Red = 0. Visual warnings prevent stockouts</p>
+                </div>
+                <div class="feature-card-clean">
+                    <div class="feature-icon-clean">
+                        <i class="fas fa-chart-simple"></i>
+                    </div>
+                    <h3>Live Stats</h3>
+                    <p>4 metrics: Items, Low, Out, Total Value ($2,329.85)</p>
+                </div>
+                <div class="feature-card-clean">
+                    <div class="feature-icon-clean">
+                        <i class="fas fa-magnifying-glass"></i>
+                    </div>
+                    <h3>Fast Search</h3>
+                    <p>Type "laptop" → instant filtering, no reloads</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="demo" class="demo-clean">
+        <div class="container">
+            <h2>30 Second Demo</h2>
+            <div class="demo-grid">
+                <div class="demo-card">
+                    <div class="demo-number">1</div>
+                    <h3>Add Item</h3>
+                    <p>Fill form → click Add → watch stats change live</p>
+                </div>
+                <div class="demo-card">
+                    <div class="demo-number">2</div>
+                    <h3>Sell Items</h3>
+                    <p>Sell button → yellow/red alerts appear instantly</p>
+                </div>
+                <div class="demo-card">
+                    <div class="demo-number">3</div>
+                    <h3>Live Search</h3>
+                    <p>Type any name → table filters immediately</p>
+                </div>
+            </div>
+            <div class="demo-cta">
+                <a href="index.html" class="btn-primary btn-large">
+                    Try Live Dashboard <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

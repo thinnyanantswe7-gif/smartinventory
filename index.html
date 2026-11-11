@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libarary Inventory Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 Library Inventory Management</h1>
+            <p>Hackathon Demo - Real-time Analytics</p>
+        </div>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number" id="totalItems">0</div>
+                <div class="stat-label">Total Items</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="lowStock">0</div>
+                <div class="stat-label"> Few Book Left ⚠️</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="outStock">0</div>
+                <div class="stat-label">Out of Stock ❌</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="totalValue">$0.00</div>
+                <div class="stat-label">Total Value 💰</div>
+            </div>
+        </div>
+        <div class="input-section">
+            <input type="text" id="searchInput" placeholder="🔍 Search by name..." class="search-input">
+            <div class="form-grid">
+                <input type="text" id="itemName" placeholder="Item Name">
+                <input type="number" id="itemQty" placeholder="Quantity" min="0">
+                <input type="number" id="itemPrice" placeholder="Price $" step="0.01" min="0">
+                <button onclick="addItem()" class="btn-primary">➕ Add Item</button>
+                <button onclick="resetData()" class="btn-secondary">🔄 Reset</button>
+            </div>
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Book Name</th>
+                        <th>Qty</th>
+                        <th>Replacement cost</th>
+                        <th>Collection Value</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="inventoryTable">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
